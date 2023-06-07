@@ -10,7 +10,7 @@ object setData {
       "What is the capital city of Pakistan?",
       1,
       "Karachi",
-      "Lahore",
+      "Taxila",
       "Islamabad",
       "Peshawar",
       3

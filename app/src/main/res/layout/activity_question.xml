@@ -11,7 +11,7 @@
     >
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/question_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ENTER YOUR QUESTION"
@@ -25,9 +25,9 @@
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:layout_marginTop="12dp"
-
         >
         <ProgressBar
+            android:id="@+id/progress_bar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -38,7 +38,7 @@
           style="?android:progressBarStyleHorizontal"
             />
         <TextView
-            android:id="@+id/questionLength"
+            android:id="@+id/progress_text"
 android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1/5"
@@ -48,9 +48,9 @@ android:layout_width="wrap_content"
             />
 
 
-    </LinearLayout>>
+    </LinearLayout>
     <TextView
-        android:id="@+id/option1"
+        android:id="@+id/opt1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="option1"
@@ -62,7 +62,7 @@ android:layout_width="wrap_content"
         android:padding="8dp"
  />
     <TextView
-        android:id="@+id/option2"
+        android:id="@+id/opt2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="option2"
@@ -74,7 +74,7 @@ android:layout_width="wrap_content"
         android:padding="8dp"
         />
     <TextView
-        android:id="@+id/option3"
+        android:id="@+id/opt3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="option3"
@@ -86,7 +86,7 @@ android:layout_width="wrap_content"
         android:padding="8dp"
         />
     <TextView
-        android:id="@+id/option4"
+        android:id="@+id/opt4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="option4"
@@ -98,10 +98,10 @@ android:layout_width="wrap_content"
         android:padding="8dp"
         />
     <Button
-        android:id="@+id/button"
+        android:id="@+id/submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Next"
+        android:text="Submit"
         android:padding="12dp"
        android:layout_marginTop="12dp" />
 

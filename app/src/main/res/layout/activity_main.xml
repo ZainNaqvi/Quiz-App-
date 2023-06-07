@@ -68,7 +68,7 @@
                 android:hint="Enter text here">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textInputEditText"
+                    android:id="@+id/textInputField"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text" />
