@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,"Enter Your Name!",Toast.LENGTH_SHORT,).show()
             }else{
                 var intent  = Intent(this,QuestionActivity::class.java)
+                intent.putExtra("${setData.name}", textInputField.text.toString())
                 startActivity(intent)
                 finish()
             }

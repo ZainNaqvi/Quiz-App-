@@ -1,6 +1,7 @@
 package com.quickfix.quizapp
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +10,7 @@ import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_question.*
 import kotlinx.android.synthetic.main.activity_question.view.*
 import java.lang.reflect.Type
@@ -18,10 +20,12 @@ class QuestionActivity : AppCompatActivity() {
     private var questionList:ArrayList<QuestionData>?=null
     private var currentQuestionIndex:Int = 1
     private var selectedIndex:Int = 0
-    
+    private  var name:String? = null
+    private  var score:Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question)
+        name = intent.getStringExtra(setData.name)
         setOptionStyle()
         questionList = setData.getQuestion()
         setQuestions()
@@ -46,6 +50,8 @@ class QuestionActivity : AppCompatActivity() {
                 if(selectedIndex!=question.correct_answer)
                 {
                     setColor(selectedIndex,R.drawable.wrong_option_border)
+                }else{
+                    score++
                 }
                 setColor(question.correct_answer,R.drawable.correct_option_border)
                 if(currentQuestionIndex==questionList!!.size)
@@ -59,7 +65,12 @@ class QuestionActivity : AppCompatActivity() {
                         setQuestions()
                     }
                     else->{
-                        Toast.makeText(this, "Hello world", Toast.LENGTH_SHORT).show()
+                        var intent = Intent(this,Result::class.java)
+                        intent.putExtra("${setData.name}", name)
+                        intent.putExtra("${setData.score}", score.toString())
+                        intent.putExtra("total_questions", questionList!!.size.toString())
+                        startActivity(intent)
+                        finish()
                     }
                 }
             }

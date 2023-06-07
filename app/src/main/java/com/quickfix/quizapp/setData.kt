@@ -1,7 +1,10 @@
 import com.quickfix.quizapp.QuestionData
 
 object setData {
+  val name:String = "name"
+  val score:String = "score"
   fun getQuestion(): ArrayList<QuestionData> {
+
 
     val questionsList: ArrayList<QuestionData> = arrayListOf()
 
