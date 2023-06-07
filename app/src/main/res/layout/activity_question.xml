@@ -8,6 +8,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="7dp"
+    android:background="@drawable/bg"
     >
 
     <TextView
@@ -15,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ENTER YOUR QUESTION"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="22dp"
         android:textStyle="bold" />
 
@@ -26,24 +27,26 @@
         android:orientation="horizontal"
         android:layout_marginTop="12dp"
         >
+
         <ProgressBar
             android:id="@+id/progress_bar"
+            style="?android:progressBarStyleHorizontal"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:minHeight="50dp"
             android:layout_marginLeft="5dp"
-            android:progress="2"
+            android:layout_weight="1"
             android:max="5"
-          style="?android:progressBarStyleHorizontal"
-            />
+            android:progressTint="@android:color/white"
+            android:minHeight="50dp"
+            android:progress="2" />
+
         <TextView
             android:id="@+id/progress_text"
 android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1/5"
             android:textSize="20sp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:padding="7dp"
             />
 
